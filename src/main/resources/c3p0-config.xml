@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c3p0-config>
+
+    <named-config name="of">
+        <property name="jdbcUrl">jdbc:mysql:///of</property>
+        <property name="user">root</property>
+        <property name="password">zgd</property>
+        <!-- 初始化数据库连接对象的数量 -->
+        <property name="initialPoolSize">3</property>
+        <!-- 最大连接对象的数量 -->
+        <property name="maxPoolSize">5</property>
+        <!-- 获取连接对象的超时时间 -->
+        <property name="checkoutTimeout">3000</property>
+    </named-config>
+
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql:///of</property>
+        <property name="user">root</property>
+        <property name="password">zgd</property>
+        <!-- 初始化数据库连接对象的数量 -->
+        <property name="initialPoolSize">3</property>
+        <!-- 最大连接对象的数量 -->
+        <property name="maxPoolSize">5</property>
+        <!-- 获取连接的超时时间 -->
+        <property name="checkoutTimeout">3000</property>
+    </default-config>
+
+</c3p0-config>

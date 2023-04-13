@@ -1,0 +1,42 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="OrangeForum:war exploded">
+    <output-path>$PROJECT_DIR$/target/OrangeForum</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>OrangeForum</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="OrangeForum" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.5" />
+          <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.20" />
+          <element id="library" level="project" name="Maven: commons-dbutils:commons-dbutils:1.7" />
+          <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:8.0.32" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.21.9" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.68" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:9.0.68" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.78" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter:5.9.2" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.2" />
+          <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.2.0" />
+          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.9.2" />
+          <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.1.2" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-params:5.9.2" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.9.2" />
+          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-engine:1.9.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/OrangeForum/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="OrangeForum/web/Web" />
+    </root>
+  </artifact>
+</component>

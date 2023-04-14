@@ -11,6 +11,37 @@
     <title>个人主页</title>
 </head>
 <script src="../js/JqueryExploit.js"></script>
+<style>
+    @import url("../css/user.css");
+    #PC{
+        margin-top: 50px;
+    }
+</style>
+<body>
+<%--页面头部--%>
+<%@ include file="header.jsp"%>
+<div class="content">
+    <div class="card" id="DivReplyPost" style="display: none">
+        <div class="description">
+            <div class="title" >标题:</div>
+            <textarea id="PostTitle" style="width: 100%;height: 8%;padding: 10px;font-size: 25px" placeholder="标题"></textarea>
+            <div class="title">内容:</div>
+            <textarea id="PostContent" style="width: 100%;height: 30%;padding: 10px;font-size: 15px" placeholder="请输入你的内容..."></textarea>
+            <button id="SendPost" type="submit" style="background-color: #ff9900;width: 100%;height: 5%;padding: 10px;">发送</button>
+        </div>
+    </div>
+    <div class="card" id="card">
+        <div class="title">用户名:<%=session.getAttribute("username") == null ? "":session.getAttribute("username")%></div>
+        <span id="PC" style="margin-left: 2%"><b>个人简介:</b></span>
+        <div class="description">暂无</div>
+        <div class="footer">
+            <span><b>创建日期:</b><%=session.getAttribute("createTime") == null ? "":session.getAttribute("createTime")%></span>
+            <button id="CreatePost" type="submit" style="background-color: #ff9900">发帖</button>
+        </div>
+        <div class="title"><span>已发布的帖子:</span></div>
+    </div>
+</div>
+</body>
 <script>
     $(function () {
         $.get("/GetPostByUserId",function (postById) {
@@ -47,7 +78,7 @@
                 $("#card").append($card)
             }
         },"json")
-        $("#ReplyPost").click(function () {
+        $("#CreatePost").click(function () {
             $("#DivReplyPost").toggle(800)
         })
         $("#SendPost").click(function () {
@@ -68,38 +99,4 @@
         })
     })
 </script>
-<style>
-    @import url("../css/user.css");
-    #PC{
-        margin-top: 50px;
-    }
-</style>
-<body>
-<%@ include file="header.jsp"%>
-
-<div class="content">
-    <div class="card" id="DivReplyPost" style="display: none">
-
-
-        <div class="description">
-            <div class="title" >标题:</div>
-            <textarea id="PostTitle" style="width: 100%;height: 8%;padding: 10px;font-size: 25px" placeholder="标题"></textarea>
-            <div class="title">内容:</div>
-            <textarea id="PostContent" style="width: 100%;height: 30%;padding: 10px;font-size: 15px" placeholder="请输入你的内容..."></textarea>
-            <button id="SendPost" type="submit" style="background-color: #ff9900;width: 100%;height: 5%;padding: 10px;">发送</button>
-        </div>
-    </div>
-    <div class="card" id="card">
-        <div class="title">用户名:<%=session.getAttribute("username")%></div>
-        <span id="PC" style="margin-left: 2%"><b>个人简介:</b></span>
-        <div class="description">暂无</div>
-        <div class="footer">
-            <span><b>创建日期:</b><%=session.getAttribute("createTime")%></span>
-            <button id="ReplyPost" type="submit" style="background-color: #ff9900">发帖</button>
-        </div>
-        <div class="title"><span>发布的帖子:</span></div>
-    </div>
-</div>
-
-</body>
 </html>

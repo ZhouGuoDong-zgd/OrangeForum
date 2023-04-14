@@ -1,7 +1,4 @@
-body {
-    background-color: #f6f6f6;
-    font-family: Arial, sans-serif;
-}
+
 .container {
     margin: auto;
     max-width: 440px;
@@ -39,14 +36,3 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #e68000;
-}
-
-a {
-    color: #f90;
-}
-
-a:hover {
-    color: #e68000;
-}

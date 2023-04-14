@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>发送帖子</title>
+  <style>
+    .PostContent {
+        width: 500px;
+        background-color: #fca728;
+        margin: 0 auto;
+        margin-top: 60px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        height: 20px;
+        padding: 10px;
+    }
+    .Content {
+        width: 440px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: #ffffff;   
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .WriptPost{
+      font-weight: 1000;
+      color: #ffffff;
+    }
+    .WriteTitle {
+      /* 字体粗细 */
+      font-weight: 400;
+      font-size: 20px;
+    }
+    .Title {
+      width: 80%;
+      /* 清除边框 */
+      border: none;
+      margin-left: 10px;
+      /* 底部边框1px 实线 */
+      border-bottom: 1px solid #ccc;
+      background-color: #ffffff;
+      /* 去除输入框选中后的样式转化状态 */
+      outline: none;
+      font-size: 20px;
+    }
+    .ContentMain {
+      width: 100%;
+      height: 100px;
+      border: none;
+      background-color: #ffffff;
+      outline: none;
+    }
+   
+  </style>
+</head>
+
+<body>
+    <div class="PostContent">
+      <span class="WriptPost">编写帖子</span>
+    </div>
+    <div class="Content">
+      <span class="WriteTitle">标题:</span><input class="Title">
+      <br><br><br>
+      <textarea class="ContentMain" placeholder="内容:"></textarea>
+    </div>
+</body>
+
+</html>

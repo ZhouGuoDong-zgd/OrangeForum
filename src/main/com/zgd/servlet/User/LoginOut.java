@@ -2,10 +2,7 @@ package main.com.zgd.servlet.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet("/LoginOut")
@@ -17,10 +14,16 @@ public class LoginOut extends HttpServlet {
         resp.setHeader("content-type","text/html;charset=utf-8");
         Cookie cookieUsername = new Cookie("username","");
         Cookie cookiePassword = new Cookie("password","");
+        //退出登入后删除持久化姓名密码相关的cookie
         cookieUsername.setMaxAge(0);
         cookiePassword.setMaxAge(0);
         resp.addCookie(cookieUsername);
         resp.addCookie(cookiePassword);
+        HttpSession session = req.getSession();
+        //退出登入后将以下内容置空
+        session.setAttribute("username",null);
+        session.setAttribute("uid",null);
+        session.setAttribute("createTime",null);
         resp.sendRedirect("/index.jsp");
     }
 

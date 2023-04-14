@@ -10,15 +10,29 @@
 <head>
     <title>头部资源</title>
 </head>
+<style>
+    .header{
+        background-color: #fca728;
+        border-radius: 10px;
+        margin-top: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    .logo{
+        font-weight: 1000;
+        color: #ffffff;
+    }
+    .FontColor {
+        color: #ffffff;
+    }
+</style>
 <body>
 <header class="header">
     <div class="logo">橘子贴吧</div>
     <nav class="nav">
         <ul>
-            <li><a href="/Html/UserHome.jsp">首页</a></li>
-            <li><a href="/Html/PersonalCenter.jsp">我的</a></li>
-            <li><a href="/LoginOut">退出</a></li>
-
+            <li><a href="/Html/UserHome.jsp"><span class="FontColor">首页</span></a></li>
+            <li><a href="/Html/PersonalCenter.jsp"><span class="FontColor">我的</span></a></li>
+            <li><a href="/LoginOut"><span class="FontColor">退出</span></a></li>
         </ul>
         <form action="#" method="get">
             <input type="text" name="search" placeholder="功能尚在开发中...">
@@ -26,5 +40,9 @@
         </form>
     </nav>
 </header>
+<script src="../js/JqueryExploit.js"></script>
+<script>
+
+</script>
 </body>
 </html>

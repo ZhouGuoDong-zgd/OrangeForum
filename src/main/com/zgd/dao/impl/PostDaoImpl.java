@@ -94,6 +94,34 @@ public class PostDaoImpl implements PostDao {
             }
         }
     }
+
+    @Override
+    public List<Post> SearchPostByLikeTitle(Post post,Integer userid) {
+        Connection connection=null;
+        try {
+            connection = dataSource.getConnection();
+        } catch (SQLException e) {
+            System.out.println("SearchPostById获取连接异常");
+            throw new RuntimeException(e);
+        }
+        try {
+            if (userid == null){
+                List<Post> Serpost = queryRunner.query(connection, "select * from post where title like ?", new BeanListHandler<>(Post.class), "%"+post.getTitle()+"%");
+                return Serpost;
+            }
+            List<Post> Serpost = queryRunner.query(connection, "select * from post where title like ? and userId = ?", new BeanListHandler<>(Post.class), "%"+post.getTitle()+"%",userid);
+            return Serpost;
+        } catch (SQLException e) {
+            System.out.println("sql查询失败");
+            throw new RuntimeException(e);
+        }finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
 }
 
 

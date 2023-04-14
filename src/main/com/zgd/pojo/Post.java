@@ -39,6 +39,9 @@ public class Post {
         this.title = title;
         this.postContent = postContent;
     }
+    public Post(String title){
+        this.title = title;
+    }
     public Post(Integer postId){
         this.postId = postId;
     }

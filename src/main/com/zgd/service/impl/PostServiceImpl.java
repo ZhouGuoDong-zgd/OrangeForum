@@ -23,4 +23,9 @@ public class PostServiceImpl implements PostService {
     public String SendPost(Post post) {
         return postDao.SendPost(post);
     }
+
+    @Override
+    public List<Post> SearchPostByLikeTitle(Post post, Integer userid) {
+        return postDao.SearchPostByLikeTitle(post, userid);
+    }
 }

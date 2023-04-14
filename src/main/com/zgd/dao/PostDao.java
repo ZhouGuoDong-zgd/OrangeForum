@@ -13,5 +13,8 @@ public interface PostDao {
 
     //添加帖子
     String SendPost(Post post);
+
+    //根据标题名称模糊查找帖子,如果有id则执行另外一个sql
+    List<Post> SearchPostByLikeTitle(Post post,Integer userid);
 }
 

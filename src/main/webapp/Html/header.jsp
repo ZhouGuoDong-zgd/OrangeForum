@@ -26,6 +26,7 @@
     }
 </style>
 <body>
+
 <header class="header">
     <div class="logo">橘子贴吧</div>
     <nav class="nav">
@@ -34,10 +35,6 @@
             <li><a href="/Html/PersonalCenter.jsp"><span class="FontColor">我的</span></a></li>
             <li><a href="/LoginOut"><span class="FontColor">退出</span></a></li>
         </ul>
-        <form action="#" method="get">
-            <input type="text" name="search" placeholder="功能尚在开发中...">
-            <button type="submit">搜索</button>
-        </form>
     </nav>
 </header>
 <script src="../js/JqueryExploit.js"></script>
